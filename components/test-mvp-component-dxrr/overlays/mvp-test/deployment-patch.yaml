@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-dxrr
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/test-images@sha256:40d368b7cc3e3a0fdbfaf7a3cce11d7041b607224e48611acd24c45926172ca5
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
